@@ -47,9 +47,9 @@
       background-color: transparent;
       background-size: 5px 5px, 5px 5px;
       background-position: -1px -1px, -1px -1px;
-      background-image: linear-gradient(rgba(#333, 0.05) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(#333, 0.05) 1px, transparent 1px);
-      animation: glitchV2 6s linear infinite, glitchV3 0.2s linear infinite;
+      background-image: linear-gradient(rgba(#333, 0.1) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(#333, 0.1) 1px, transparent 1px);
+      animation: glitchV2 3s linear infinite, glitchV3 0.2s linear infinite;
     }
   }
 

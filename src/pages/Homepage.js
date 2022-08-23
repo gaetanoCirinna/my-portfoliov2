@@ -33,7 +33,7 @@ const Homepage = () => {
       </section>
 
       {/* Projects */}
-      <section className="projects py-5">
+      <section className="projects py-5" id="projects">
         <div className="container">
           <div className="row">
             <div className="col-12">
@@ -123,7 +123,7 @@ const Homepage = () => {
       </section>
 
       {/* Presentation */}
-      <section className="presentation py-5">
+      <section className="presentation py-5" id="presentation">
         <div className="container">
           <div className="row">
             <div className="col-8">
@@ -192,7 +192,7 @@ const Homepage = () => {
       </section>
 
       {/* Contact me */}
-      <section className="contact-me py-5 ">
+      <section className="contact-me py-5" id="contactMe">
         <div className="container">
           <div className="row">
             <div className="col-12">
