@@ -1,5 +1,6 @@
 .GlitchImage__img-container {
   position: absolute;
+  z-index: 1;
   top: 0%;
   right: -10px;
   width: 100%;
@@ -30,5 +31,40 @@
     transition: all 0.2s ease-out;
     transition-delay: 0.1s;
     opacity: 0.1;
+  }
+}
+
+.GlitchImage__img-container-bg {
+  position: absolute;
+  z-index: 1;
+  top: 0%;
+  left: 0%;
+  width: 110%;
+  height: 100%;
+
+  .image {
+    position: absolute;
+    top: 0;
+    right: 0;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    z-index: 3;
+    transition: all 0.2s ease-out;
+    transition-delay: 0.1s;
+    opacity: 0.4;
+  }
+  .image2 {
+    position: absolute;
+    top: 0%;
+    right: 0;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    filter: grayscale(1);
+    transition: all 0.2s ease-out;
+    transition-delay: 0.1s;
+    opacity: 0.3;
   }
 }

@@ -2,7 +2,7 @@ import { useContext, Fragment, useRef, useEffect, useState } from "react";
 import "./GlitchImage.scss";
 
 const GlitchImage = (props) => {
-  const { bgImg } = props;
+  const { bgImg, background } = props;
   const refImgV1 = useRef(null);
   const refImgV2 = useRef(null);
   const [X, setX] = useState(0);
@@ -32,7 +32,13 @@ const GlitchImage = (props) => {
   }, []);
 
   return (
-    <div className="GlitchImage__img-container">
+    <div
+      className={`${
+        background
+          ? "GlitchImage__img-container-bg"
+          : "GlitchImage__img-container"
+      }`}
+    >
       <img src={bgImg} className="image" ref={refImgV1}></img>
       <img src={bgImg} className="image2" ref={refImgV2}></img>
     </div>

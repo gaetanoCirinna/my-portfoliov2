@@ -2,6 +2,7 @@ import React, { Fragment, useRef, useState, useEffect } from "react";
 import "./Project.scss";
 import { window } from "browser-monads";
 
+import Text from "../components/Text";
 import logo from "./../assets/betterly logo styloso.png";
 
 const Project = () => {
@@ -20,8 +21,27 @@ const Project = () => {
       secondTitle: "De Agostini",
       description:
         "Veniam nulla pariatur veniam cupidatat. Cupidatat aliqua consectetur fugiat ullamco duis ipsum nostrud qui voluptate dolor consequat. Ullamco in anim veniam adipisicing ullamco adipisicing. Id sint irure excepteur ad velit pariatur est irure voluptate.",
-      websiteTitle: "Look the real website!",
+      websiteTitle:
+        "Look the real <a href='https://www.betterly.com/uk'>website</a>!",
       websiteURL: "https://www.betterly.com/uk",
+    },
+    deagostini: {
+      title: "De Agostini",
+      tags: ["Angular", "Java", "Pizza"],
+      secondTitle: "De Agostini Publishing",
+      description:
+        "Veniam nulla pariatur veniam cupidatat. Cupidatat aliqua consectetur fugiat ullamco duis ipsum nostrud qui voluptate dolor consequat. Ullamco in anim veniam adipisicing ullamco adipisicing. Id sint irure excepteur ad velit pariatur est irure voluptate.",
+      websiteTitle: "Look the real website!",
+      websiteURL: "https://www.deagostini.com/uk/",
+    },
+    fanhome: {
+      title: "Fanhome",
+      tags: ["Angular", "Java", "Pizza"],
+      secondTitle: "De Agostini Publishing",
+      description:
+        "Veniam nulla pariatur veniam cupidatat. Cupidatat aliqua consectetur fugiat ullamco duis ipsum nostrud qui voluptate dolor consequat. Ullamco in anim veniam adipisicing ullamco adipisicing. Id sint irure excepteur ad velit pariatur est irure voluptate.",
+      websiteTitle: "Look the real website!",
+      websiteURL: "https://www.fanhome.com/uk/",
     },
     default: {
       title: "Nothing found .-.",
@@ -64,11 +84,11 @@ const Project = () => {
   useEffect(() => {
     if (logo2 && logo2.current) {
       logo2.current.style.left = X + "px";
-      logo2.current.style.top = -Y + "px";
+      logo2.current.style.top = Y + "px";
     }
     if (logo1 && logo1.current) {
       logo1.current.style.left = -X + "px";
-      logo1.current.style.top = Y + "px";
+      logo1.current.style.top = -Y + "px";
     }
   }, [X, Y]);
 
@@ -115,7 +135,7 @@ const Project = () => {
 
               <div className="col-12">
                 <p className="mt-3 window-border-inset px-2 m-0">
-                  {dataRaw[param]?.websiteTitle}
+                  <Text>{dataRaw[param]?.websiteTitle}</Text>
                 </p>
               </div>
               <div className="col-12">

@@ -6,6 +6,8 @@ import bgImg from "./../assets/test vaporwave2.png";
 import betterlyIcon from "./../assets/betterly icon.png";
 import worldIcon from "./../assets/icons/world.png";
 import GlitchImage from "../components/GlitchImage/GlitchImage";
+import Text from "../components/Text";
+import bgLargeHero from "./../assets/background portfolio.png";
 
 const Homepage = () => {
   const refImgV1 = useRef(null);
@@ -26,12 +28,12 @@ const Homepage = () => {
           <div className="gradient"></div>
           <div className="grid-overlay"></div>
 
-          <GlitchImage bgImg={bgImg}></GlitchImage>
+          <GlitchImage bgImg={bgLargeHero} background={true}></GlitchImage>
         </div>
       </section>
 
       {/* Projects */}
-      <section className="projects mt-5">
+      <section className="projects py-5">
         <div className="container">
           <div className="row">
             <div className="col-12">
@@ -40,8 +42,57 @@ const Homepage = () => {
           </div>
 
           <div className="row">
+            {/* De Agostini */}
             <div className="col-12 col-md-4">
-              <a href="/project?id=betterly" className="card p-1">
+              <a href="/project?id=deagostini" className="card window-border">
+                <div className="card-header d-flex justify-content-between align-items-center">
+                  <div className="d-flex align-items-center gap-1">
+                    <img width={16} height={16} src={betterlyIcon}></img>
+                    <span>deagostini.exe</span>
+                  </div>
+                  <div className="card-controls">
+                    <div role="button" className="card-icon">
+                      <div className="icon-zoom"></div>
+                    </div>
+                    <div role="button" className="card-icon">
+                      <div className="icon-close">X</div>
+                    </div>
+                  </div>
+                </div>
+                <div className="card-body px-0 pb-0 pt-1">
+                  <div className="img-container">
+                    <img src="https://images.unsplash.com/photo-1661105029962-898acb801f18?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80"></img>
+                  </div>
+                </div>
+              </a>
+            </div>
+            {/* Fanhome */}
+            <div className="col-12 col-md-4">
+              <a href="/project?id=fanhome" className="card window-border">
+                <div className="card-header d-flex justify-content-between align-items-center">
+                  <div className="d-flex align-items-center gap-1">
+                    <img width={16} height={16} src={betterlyIcon}></img>
+                    <span>fanhome.exe</span>
+                  </div>
+                  <div className="card-controls">
+                    <div role="button" className="card-icon">
+                      <div className="icon-zoom"></div>
+                    </div>
+                    <div role="button" className="card-icon">
+                      <div className="icon-close">X</div>
+                    </div>
+                  </div>
+                </div>
+                <div className="card-body px-0 pb-0 pt-1">
+                  <div className="img-container">
+                    <img src="https://images.unsplash.com/photo-1661105029962-898acb801f18?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80"></img>
+                  </div>
+                </div>
+              </a>
+            </div>
+            {/* Betterly */}
+            <div className="col-12 col-md-4">
+              <a href="/project?id=betterly" className="card window-border">
                 <div className="card-header d-flex justify-content-between align-items-center">
                   <div className="d-flex align-items-center gap-1">
                     <img width={16} height={16} src={betterlyIcon}></img>
@@ -65,10 +116,14 @@ const Homepage = () => {
             </div>
           </div>
         </div>
+
+        <div className="grid-effect-container">
+          <div className="grid-effect-up"></div>
+        </div>
       </section>
 
       {/* Presentation */}
-      <section className="presentation mt-5 pt-5">
+      <section className="presentation py-5">
         <div className="container">
           <div className="row">
             <div className="col-8">
@@ -152,7 +207,7 @@ const Homepage = () => {
                 <label>Your e-mail:</label>
               </div>
               <div className="col-8">
-                <input></input>
+                <input className="window-border-inset"></input>
               </div>
             </div>
           </div>
