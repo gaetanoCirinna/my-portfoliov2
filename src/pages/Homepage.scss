@@ -1,0 +1,248 @@
+@import "./../App.scss";
+.hero-banner {
+  position: relative;
+  width: 100vw;
+  height: 60vh;
+  .background {
+    overflow-x: clip;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    .gradient {
+      width: 100%;
+      height: 100%;
+      background: rgba(map-get($colors, pink), 1);
+      background: linear-gradient(
+        125deg,
+        rgba(map-get($colors, pink), 1) 0%,
+        rgba(map-get($colors, blue), 1) 100%
+      );
+    }
+    .grid-overlay {
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: transparent;
+      background-size: 5px 5px, 5px 5px;
+      background-position: -1px -1px, -1px -1px;
+      background-image: linear-gradient(
+          rgba(255, 255, 255, 0.09) 1px,
+          transparent 1px
+        ),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.09) 1px, transparent 1px);
+      mix-blend-mode: difference;
+    }
+
+    .glitch-v2 {
+      position: absolute;
+      z-index: 99;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 10px;
+      background-color: transparent;
+      background-size: 5px 5px, 5px 5px;
+      background-position: -1px -1px, -1px -1px;
+      background-image: linear-gradient(rgba(#333, 0.05) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(#333, 0.05) 1px, transparent 1px);
+      animation: glitchV2 6s linear infinite, glitchV3 0.2s linear infinite;
+    }
+  }
+
+  .main-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+    .main-title {
+      color: #fff;
+      font-size: 48px;
+      line-height: 1.125;
+      margin: 0;
+      width: 100%;
+
+      @include media-breakpoint-up(md) {
+      }
+    }
+    .second-title {
+      margin: 0;
+      line-height: 1.125;
+    }
+  }
+}
+
+.projects {
+  .card {
+    text-decoration: none;
+    background-color: #b6b6b6;
+    box-shadow: 2px 2px 0px 0px rgba(0, 0, 0, 1);
+    .card-header {
+      background-color: #0900a9;
+      min-height: 24px;
+      color: #fff;
+    }
+    .card-body {
+      .img-container {
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          object-position: center;
+        }
+      }
+    }
+    .card-controls {
+      height: 100%;
+      display: flex;
+      gap: 4px;
+    }
+    .card-icon {
+      width: 20px;
+      height: 20px;
+      background-color: #b6b6b6;
+      box-shadow: 2px 2px 0px 0px rgba(0, 0, 0, 1);
+      transform: scale(1);
+      transition: all 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      &:active {
+        box-shadow: none;
+        transform: scale(0.8);
+      }
+    }
+    .icon-zoom {
+      border: 1px solid #333;
+      border-top: 3px solid #333;
+      width: 80%;
+      height: 80%;
+    }
+    .icon-close {
+      width: 80%;
+      height: 80%;
+      color: #333;
+      line-height: 1;
+      font-family: "Karla", sans-serif;
+      font-weight: 700;
+      user-select: none;
+    }
+  }
+}
+
+.presentation {
+  background-color: #d88dc2;
+  color: #fff;
+  position: relative;
+  overflow-x: clip;
+
+  .main-title {
+    text-align: left;
+  }
+  .description {
+    text-align: left;
+  }
+  .place-description {
+    color: #fff;
+  }
+  .year-description {
+    color: #fff;
+  }
+  .job-main-title {
+    text-align: left;
+  }
+  .job-description {
+    text-align: left;
+    ul {
+      margin: 0;
+      margin-bottom: 16px;
+      padding: 0;
+    }
+  }
+}
+
+.contact-me {
+  background-color: #f5f5f5;
+  padding-bottom: calc(40px + 10vh) !important;
+  .container-custom {
+    max-width: 768px;
+  }
+  label {
+    font-size: 24px;
+  }
+  input {
+    font-size: 24px;
+    min-height: 32px;
+    width: 100%;
+    background-color: #fff;
+    border: 0px;
+    box-shadow: inset 2px 2px 0px 0px rgba(0, 0, 0, 1);
+    transition: all 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+    &:focus {
+      box-shadow: none;
+      border: 1px solid #333;
+    }
+    &:focus-visible {
+      border: 1px solid #333;
+      box-shadow: none;
+    }
+  }
+}
+
+@keyframes glitchV3 {
+  0% {
+    clip-path: polygon(
+      20% 0%,
+      80% 0%,
+      100% 20%,
+      100% 80%,
+      80% 100%,
+      20% 100%,
+      0% 80%,
+      0% 20%
+    );
+  }
+  25% {
+    clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
+  }
+  50% {
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  }
+  75% {
+    clip-path: polygon(20% 0%, 80% 0%, 100% 100%, 0% 100%);
+  }
+  100% {
+    clip-path: polygon(
+      0% 15%,
+      15% 15%,
+      15% 0%,
+      85% 0%,
+      85% 15%,
+      100% 15%,
+      100% 85%,
+      85% 85%,
+      85% 100%,
+      15% 100%,
+      15% 85%,
+      0% 85%
+    );
+  }
+}
+@keyframes glitchV2 {
+  0% {
+    top: 0%;
+  }
+
+  100% {
+    top: 100%;
+  }
+}
