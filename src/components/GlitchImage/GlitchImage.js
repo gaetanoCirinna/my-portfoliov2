@@ -2,7 +2,7 @@ import { useContext, Fragment, useRef, useEffect, useState } from "react";
 import "./GlitchImage.scss";
 
 const GlitchImage = (props) => {
-  const { bgImg, background } = props;
+  const { bgImg, background, moveX, moveY } = props;
   const refImgV1 = useRef(null);
   const refImgV2 = useRef(null);
   const [X, setX] = useState(0);
@@ -21,8 +21,8 @@ const GlitchImage = (props) => {
 
   useEffect(() => {
     const setFromEvent = (e) => {
-      setX(parseInt((e.clientX * 5) / window.innerWidth));
-      setY(parseInt((e.clientY * 3) / window.innerHeight));
+      setX(parseInt((e.clientX * moveX) / window.innerWidth));
+      setY(parseInt((e.clientY * moveY) / window.innerHeight));
     };
     window.addEventListener("mousemove", setFromEvent);
 
@@ -44,5 +44,10 @@ const GlitchImage = (props) => {
     </div>
   );
 };
-
+GlitchImage.defaultProps = {
+  bgImg: "",
+  background: false,
+  moveX: 5,
+  moveY: 3,
+};
 export default GlitchImage;
