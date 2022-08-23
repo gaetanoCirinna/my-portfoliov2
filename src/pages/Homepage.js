@@ -20,7 +20,7 @@ const Homepage = () => {
         <div className="main-content">
           <h3 className="second-title">Gaetano Cirinnà</h3>
           <h1 className="main-title">
-            I'm a developer and I do stuff and thinghs!
+            I'm a developer and I do stuff and things!
           </h1>
         </div>
         <div className="background">
