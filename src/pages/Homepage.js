@@ -234,14 +234,14 @@ const Homepage = () => {
             <div className="col-8">
               <h2 className="main-title">__hey</h2>
               <p className="description">
-                Hi, I'm Gaetano! My education starts with a Secondary School
-                Diploma in IT thanks to it I learn different kinds of languages
-                like C++, PhP, Mysql. I continue my studies with a bachelor's
-                degree in Technological arts that allowed me to improve my
-                skills in design, photography and videomaking.
+                Hi, I'm Gaetano! My education started with a Secondary School
+                Diploma in IT and thanks to it I learned different kinds of
+                languages like C++, PhP, Mysql. I continue my studies with a
+                bachelor's degree in Technological arts that allowed me to
+                improve my skills in design, photography and videomaking.
               </p>
               <p className="description">
-                "Web accessibility" was the title of my thesis. I explain of one
+                "Web accessibility" was the title of my thesis. I've explain one
                 of the most important things during web development:
                 accessibility. I have written this like a sort of a guide for
                 everyone who wanna try to develop a website but has no
@@ -321,7 +321,7 @@ const Homepage = () => {
                 ></input>
               </div>
               <div className="col-4">
-                <label>Your message:</label>
+                <label>Your message (help me to help yourself):</label>
               </div>
               <div className="col-8">
                 <textarea

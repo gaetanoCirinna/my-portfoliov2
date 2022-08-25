@@ -1,7 +1,7 @@
 import React from "react";
 import "./Footer.scss";
 
-import logo from "./../../assets/icons/logo.png";
+import logo from "./../../assets/Personal logo white.svg";
 
 const Footer = () => {
   return (
@@ -25,6 +25,7 @@ const Footer = () => {
                   <li>React</li>
                   <li>Angular</li>
                   <li>Python</li>
+                  <li>Go</li>
                 </ul>
               </div>
               {/* Build tools and task runner */}
@@ -78,9 +79,8 @@ const Footer = () => {
               <h4>Gaetano Cirinnà</h4>
               <img width={32} height={32} src={logo}></img>
               <p>
-                Contare è la cosa più aggressiva che si possa fare a un
-                computer, è l’equivalente del guardare un essereumano con aria
-                minacciosa ripetendo: “Sangue... sangue... sangue... sangue".
+                Just remember: "Albus Dumbledore" was the real villain in Harry
+                Potter.
               </p>
               <div className="d-flex w-100 gap-2 justify-content-center">
                 <a href="https://github.com/gaetanoCirinna">Github</a>
@@ -91,6 +91,12 @@ const Footer = () => {
               </div>
             </div>
           </div>
+        </div>
+
+        <div className="col-12">
+          <h6 className="copyright-text pt-3 pb-5">
+            @Copyright Gaetano Cirinnà 2022 (???)
+          </h6>
         </div>
       </div>
     </footer>

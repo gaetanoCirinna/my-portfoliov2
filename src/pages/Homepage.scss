@@ -202,11 +202,16 @@
 .contact-me {
   background-color: #f5f5f5;
   padding-bottom: calc(40px + 10vh) !important;
+  div[class^="col-"],
+  div[class*=" col-"] {
+    margin-top: 16px;
+  }
   .container-custom {
     max-width: 768px;
   }
   label {
-    font-size: 24px;
+    font-size: 16px;
+    text-align: right;
   }
   input {
     font-size: 24px;
@@ -241,6 +246,11 @@
       //   border: 1px solid #333;
       box-shadow: none;
     }
+  }
+
+  button {
+    width: 100%;
+    max-width: 246px;
   }
 }
 
