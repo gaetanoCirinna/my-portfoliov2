@@ -64,6 +64,7 @@
     align-items: center;
     justify-content: center;
     z-index: 2;
+
     .main-title {
       color: #fff;
       font-size: 48px;
@@ -81,8 +82,22 @@
     .second-title {
       margin: 0;
       line-height: 1.125;
+      color: map-get($colors, oxfordBlue);
+      position: relative;
     }
   }
+}
+.glitch-text {
+  position: relative;
+  span {
+    position: relative;
+  }
+}
+@function randomNum($min, $max) {
+  $rand: random();
+  $randomNum: $min + floor($rand * (($max - $min) + 1));
+
+  @return $randomNum;
 }
 
 .projects {
@@ -99,9 +114,9 @@
     margin-top: 16px;
     // box-shadow: 2px 2px 0px 0px rgba(0, 0, 0, 1);
     .card-header {
-      background-color: map-get($colors, oxfordBlue);
+      //   background-color: map-get($colors, oxfordBlue);
       min-height: 24px;
-      color: #fff;
+      color: #36454f;
       border-radius: 0;
     }
     .card-body {

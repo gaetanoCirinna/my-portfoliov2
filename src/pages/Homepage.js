@@ -13,17 +13,44 @@ import townImg from "./../assets/town portfolio.png";
 import GlitchImage from "../components/GlitchImage/GlitchImage";
 import Text from "../components/Text";
 import bgLargeHero from "./../assets/background portfolio.png";
+import GlitchText from "../components/GlitcgText";
+
+import { send } from "emailjs-com";
 
 const Homepage = () => {
   const refImgV1 = useRef(null);
   const refImgV2 = useRef(null);
+
+  const [toSend, setToSend] = useState({
+    from_name: "",
+    to_name: "",
+    message: "",
+    reply_to: "",
+  });
+
+  const onSubmit = (e) => {
+    e.preventDefault();
+    send("service_lkzacwz", "template_jgmmcp9", toSend, "_Xux2pRTd-wZwpa9i")
+      .then((response) => {
+        console.log("SUCCESS!", response.status, response.text);
+      })
+      .catch((err) => {
+        console.log("FAILED...", err);
+      });
+  };
+
+  const handleChange = (e) => {
+    setToSend({ ...toSend, [e.target.name]: e.target.value });
+  };
 
   return (
     <Fragment>
       {/* Large hero */}
       <section className="hero-banner">
         <div className="main-content">
-          <h3 className="second-title">Gaetano Cirinnà</h3>
+          <h3 className="second-title">
+            <GlitchText>Gaetano Cirinnà</GlitchText>
+          </h3>
           <h1 className="main-title">
             I'm a developer and I do stuff and things!
           </h1>
@@ -267,26 +294,45 @@ const Homepage = () => {
             </div>
           </div>
         </div>
-        <form>
+        <form onSubmit={onSubmit}>
           <div className="container container-custom">
             <div className="row">
               <div className="col-4">
                 <label>Your e-mail:</label>
               </div>
               <div className="col-8">
-                <input className="window-border-inset"></input>
+                <input
+                  onChange={handleChange}
+                  name="from_email"
+                  value={toSend.from_email}
+                  className="window-border-inset"
+                ></input>
               </div>
               <div className="col-4">
                 <label>Your name:</label>
               </div>
               <div className="col-8">
-                <input className="window-border-inset"></input>
+                <input
+                  onChange={handleChange}
+                  name="from_name"
+                  placeholder=""
+                  value={toSend.from_name}
+                  className="window-border-inset"
+                ></input>
               </div>
               <div className="col-4">
                 <label>Your message:</label>
               </div>
               <div className="col-8">
-                <textarea className="window-border-inset"></textarea>
+                <textarea
+                  onChange={handleChange}
+                  name="from_message"
+                  value={toSend.from_message}
+                  className="window-border-inset"
+                ></textarea>
+              </div>
+              <div className="col-12">
+                <button type="submit">Submit</button>
               </div>
             </div>
           </div>
