@@ -5,8 +5,8 @@ footer {
   padding-top: 10vh;
   background: linear-gradient(
     180deg,
-    rgba(95, 162, 239, 1) 0%,
-    rgba(231, 101, 173, 1) 70%
+    rgba(map-get($colors, russianViolet), 1) 0%,
+    rgba(map-get($colors, mardiGrass), 1) 70%
   );
 
   .sun {
@@ -139,6 +139,34 @@ footer {
         0 9.5em
       );
       animation: lightEffect 20s linear infinite reverse;
+    }
+  }
+
+  .skills {
+    color: #fff;
+    text-align: left;
+    ul {
+      list-style-type: none;
+      margin: 0%;
+      padding: 0%;
+      margin-bottom: 16px;
+    }
+    span {
+      font-weight: 700;
+    }
+  }
+  .last-item-on-footer {
+    text-align: center;
+    h4 {
+      font-weight: 700;
+      font-size: 32px;
+    }
+    a {
+      color: #fff;
+      font-weight: 700;
+    }
+    p {
+      font-size: 16px;
     }
   }
 }

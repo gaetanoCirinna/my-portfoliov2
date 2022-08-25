@@ -231,3 +231,23 @@ $fg-gradient: linear-gradient(
   border: 2px solid #eeeeee;
   box-shadow: 0px 0px 0px 2px rgba(0, 0, 0, 1);
 }
+
+.fill-icon {
+  padding: 1px;
+
+  &--dea {
+    background-color: #fff;
+    border: 1px solid #00828c;
+  }
+  &--fh {
+    background-color: #662482;
+    border: 1px solid #fff;
+  }
+  &--leroy {
+    background-color: #fff;
+  }
+  &--nasa {
+    background-color: #fff;
+    border: 1px solid #32539f;
+  }
+}

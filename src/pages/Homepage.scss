@@ -86,6 +86,7 @@
 }
 
 .projects {
+  overflow: hidden;
   position: relative;
   .container {
     position: relative;
@@ -95,6 +96,7 @@
     text-decoration: none;
     background-color: #b6b6b6;
     border-radius: 0;
+    margin-top: 16px;
     // box-shadow: 2px 2px 0px 0px rgba(0, 0, 0, 1);
     .card-header {
       background-color: map-get($colors, oxfordBlue);
@@ -152,7 +154,7 @@
 }
 
 .presentation {
-  background-color: #d88dc2;
+  background-color: map-get($colors, rajah);
   color: #fff;
   position: relative;
   overflow-x: clip;
@@ -192,6 +194,23 @@
     font-size: 24px;
   }
   input {
+    font-size: 24px;
+    min-height: 32px;
+    width: 100%;
+    background-color: #fff;
+
+    // box-shadow: inset 2px 2px 0px 0px rgba(0, 0, 0, 1);
+    transition: all 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+    &:focus {
+      box-shadow: none;
+      //   border: 1px solid #333;
+    }
+    &:focus-visible {
+      //   border: 1px solid #333;
+      box-shadow: none;
+    }
+  }
+  textarea {
     font-size: 24px;
     min-height: 32px;
     width: 100%;
@@ -279,15 +298,8 @@
     transform: rotateX(45deg) translateX(-50%);
     background-size: 10px 10px, 10px 10px;
     background-position: -1px -1px, -1px -1px;
-    background-image: linear-gradient(
-        rgba(map-get($colors, pink), 0.2) 1px,
-        transparent 1px
-      ),
-      linear-gradient(
-        90deg,
-        rgba(map-get($colors, pink), 0.2) 1px,
-        transparent 1px
-      );
+    background-image: linear-gradient(rgba(#fff, 1) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(#fff, 1) 1px, map-get($colors, rajah) 1px);
     mix-blend-mode: difference;
   }
   .grid-effect-down {

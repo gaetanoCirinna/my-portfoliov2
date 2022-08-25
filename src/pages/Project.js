@@ -19,18 +19,18 @@ const Project = () => {
       title: "Betterly",
       tags: ["Angular", "Java", "Pizza"],
       secondTitle: "De Agostini",
-      description:
+      description: [
         "Veniam nulla pariatur veniam cupidatat. Cupidatat aliqua consectetur fugiat ullamco duis ipsum nostrud qui voluptate dolor consequat. Ullamco in anim veniam adipisicing ullamco adipisicing. Id sint irure excepteur ad velit pariatur est irure voluptate.",
+      ],
       websiteTitle:
         "Look the real <a href='https://www.betterly.com/uk'>website</a>!",
       websiteURL: "https://www.betterly.com/uk",
     },
     deagostini: {
-      title: "De Agostini",
-      tags: ["Angular", "Java", "Pizza"],
+      title: "<a href='https://www.deagostini.com/uk/'>deagostini.com</a>",
+      tags: ["Gatsby", "React", "SSCSS"],
       secondTitle: "De Agostini Publishing",
-      description:
-        "Veniam nulla pariatur veniam cupidatat. Cupidatat aliqua consectetur fugiat ullamco duis ipsum nostrud qui voluptate dolor consequat. Ullamco in anim veniam adipisicing ullamco adipisicing. Id sint irure excepteur ad velit pariatur est irure voluptate.",
+      description: [""],
       websiteTitle: "Look the real website!",
       websiteURL: "https://www.deagostini.com/uk/",
     },
@@ -38,18 +38,44 @@ const Project = () => {
       title: "Fanhome",
       tags: ["Angular", "Java", "Pizza"],
       secondTitle: "De Agostini Publishing",
-      description:
+      description: [
         "Veniam nulla pariatur veniam cupidatat. Cupidatat aliqua consectetur fugiat ullamco duis ipsum nostrud qui voluptate dolor consequat. Ullamco in anim veniam adipisicing ullamco adipisicing. Id sint irure excepteur ad velit pariatur est irure voluptate.",
+      ],
       websiteTitle: "Look the real website!",
       websiteURL: "https://www.fanhome.com/uk/",
     },
+    leroy: {
+      title: "Leroy Merlin",
+      tags: ["Angular", "Java", "Pizza"],
+      secondTitle: "Mastercode, TAG, Milano - Final exam",
+      description: [
+        "Veniam nulla pariatur veniam cupidatat. Cupidatat aliqua consectetur fugiat ullamco duis ipsum nostrud qui voluptate dolor consequat. Ullamco in anim veniam adipisicing ullamco adipisicing. Id sint irure excepteur ad velit pariatur est irure voluptate.",
+      ],
+      websiteTitle: "Look the real website!",
+      websiteURL: "https://leroy-merlin-tag-final.netlify.app/",
+      mobile: true,
+    },
+    asteroids: {
+      title: "Asteroids news",
+      tags: ["Angular", "Java", "Pizza"],
+      secondTitle: "Visual Agency - Assinment",
+      description: [
+        "Veniam nulla pariatur veniam cupidatat. Cupidatat aliqua consectetur fugiat ullamco duis ipsum nostrud qui voluptate dolor consequat. Ullamco in anim veniam adipisicing ullamco adipisicing. Id sint irure excepteur ad velit pariatur est irure voluptate.",
+      ],
+      websiteTitle:
+        "Look the real <a href='https://asteroidsneows-visualagency.netlify.app/'>website</a>!",
+      websiteURL: "https://asteroidsneows-visualagency.netlify.app/",
+      mobile: false,
+    },
+
     default: {
       title: "Nothing found .-.",
       tags: ["Angular", "Java", "Pizza"],
       secondTitle: "De Agostini",
-      description:
+      description: [
         "Veniam nulla pariatur veniam cupidatat. Cupidatat aliqua consectetur fugiat ullamco duis ipsum nostrud qui voluptate dolor consequat. Ullamco in anim veniam adipisicing ullamco adipisicing. Id sint irure excepteur ad velit pariatur est irure voluptate.",
-      websiteTitle: "Look the real website!",
+      ],
+      websiteTitle: "Look the website below!",
       websiteURL: "https://www.betterly.com/uk",
     },
   };
@@ -110,7 +136,9 @@ const Project = () => {
         <div className="container">
           <div className="main-content p-5">
             <div className="d-flex justify-content-between align-items-center">
-              <h1 className="main-title">{dataRaw[param]?.title}</h1>
+              <h1 className="main-title">
+                <Text>{dataRaw[param]?.title}</Text>
+              </h1>
 
               <div className="img-container-logo">
                 <img ref={logo1} src={logo} className="logo1"></img>
@@ -130,7 +158,9 @@ const Project = () => {
 
             <div className="row">
               <div className="col-8">
-                <p>{dataRaw[param]?.description}</p>
+                {dataRaw[param]?.description.map((desc, index) => {
+                  return <p key={index}>{desc}</p>;
+                })}
               </div>
 
               <div className="col-12">
@@ -138,7 +168,7 @@ const Project = () => {
                   <Text>{dataRaw[param]?.websiteTitle}</Text>
                 </p>
               </div>
-              <div className="col-12">
+              <div className={`${dataRaw[param]?.mobile ? "col-6" : "col-12"}`}>
                 <div className="mt-2 window-border-inset website-container">
                   <iframe
                     id="inlineFrameExample"

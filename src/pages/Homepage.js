@@ -5,6 +5,11 @@ import { window } from "browser-monads";
 import bgImg from "./../assets/test vaporwave2.png";
 import betterlyIcon from "./../assets/betterly icon.png";
 import worldIcon from "./../assets/icons/world.png";
+import deaIcon from "./../assets/icons/dea favicon.png";
+import fhicon from "./../assets/icons/fanhome favicon.svg";
+import leroyIcon from "./../assets/icons/leroy favicon.ico";
+import nasaIcon from "./../assets/icons/nasa favicon.ico";
+import townImg from "./../assets/town portfolio.png";
 import GlitchImage from "../components/GlitchImage/GlitchImage";
 import Text from "../components/Text";
 import bgLargeHero from "./../assets/background portfolio.png";
@@ -28,7 +33,7 @@ const Homepage = () => {
           <div className="gradient"></div>
           <div className="grid-overlay"></div>
 
-          <GlitchImage bgImg={bgLargeHero} background={true}></GlitchImage>
+          <GlitchImage bgImg={townImg} background={true}></GlitchImage>
         </div>
       </section>
 
@@ -44,10 +49,15 @@ const Homepage = () => {
           <div className="row">
             {/* De Agostini */}
             <div className="col-12 col-md-4">
-              <a href="/project?id=deagostini" className="card window-border">
+              <div className="card window-border">
                 <div className="card-header d-flex justify-content-between align-items-center">
                   <div className="d-flex align-items-center gap-1">
-                    <img width={16} height={16} src={betterlyIcon}></img>
+                    <img
+                      className="fill-icon fill-icon--dea"
+                      width={16}
+                      height={16}
+                      src={deaIcon}
+                    ></img>
                     <span>deagostini.exe</span>
                   </div>
                   <div className="card-controls">
@@ -59,19 +69,27 @@ const Homepage = () => {
                     </div>
                   </div>
                 </div>
-                <div className="card-body px-0 pb-0 pt-1">
+                <a
+                  href="/project?id=deagostini"
+                  className="card-body px-0 pb-0 pt-1"
+                >
                   <div className="img-container">
                     <img src="https://images.unsplash.com/photo-1661105029962-898acb801f18?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80"></img>
                   </div>
-                </div>
-              </a>
+                </a>
+              </div>
             </div>
             {/* Fanhome */}
             <div className="col-12 col-md-4">
               <a href="/project?id=fanhome" className="card window-border">
                 <div className="card-header d-flex justify-content-between align-items-center">
                   <div className="d-flex align-items-center gap-1">
-                    <img width={16} height={16} src={betterlyIcon}></img>
+                    <img
+                      className="fill-icon fill-icon--fh"
+                      width={16}
+                      height={16}
+                      src={fhicon}
+                    ></img>
                     <span>fanhome.exe</span>
                   </div>
                   <div className="card-controls">
@@ -114,12 +132,72 @@ const Homepage = () => {
                 </div>
               </a>
             </div>
+            {/* Leroy Merlin */}
+            <div className="col-12 col-md-4">
+              <a href="/project?id=leroy" className="card window-border">
+                <div className="card-header d-flex justify-content-between align-items-center">
+                  <div className="d-flex align-items-center gap-1">
+                    <img
+                      className="fill-icon fill-icon--leroy"
+                      width={16}
+                      height={16}
+                      src={leroyIcon}
+                    ></img>
+                    <span>leroy_merlin.exe</span>
+                  </div>
+                  <div className="card-controls">
+                    <div role="button" className="card-icon">
+                      <div className="icon-zoom"></div>
+                    </div>
+                    <div role="button" className="card-icon">
+                      <div className="icon-close">X</div>
+                    </div>
+                  </div>
+                </div>
+                <div className="card-body px-0 pb-0 pt-1">
+                  <div className="img-container">
+                    <img src="https://images.unsplash.com/photo-1661105029962-898acb801f18?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80"></img>
+                  </div>
+                </div>
+              </a>
+            </div>
+            {/* Visual Agency */}
+            <div className="col-12 col-md-4">
+              <a href="/project?id=asteroids" className="card window-border">
+                <div className="card-header d-flex justify-content-between align-items-center">
+                  <div className="d-flex align-items-center gap-1">
+                    <img
+                      className="fill-icon fill-icon--nasa"
+                      width={16}
+                      height={16}
+                      src={nasaIcon}
+                    ></img>
+                    <span>asteroids_news.exe</span>
+                  </div>
+                  <div className="card-controls">
+                    <div role="button" className="card-icon">
+                      <div className="icon-zoom"></div>
+                    </div>
+                    <div role="button" className="card-icon">
+                      <div className="icon-close">X</div>
+                    </div>
+                  </div>
+                </div>
+                <div className="card-body px-0 pb-0 pt-1">
+                  <div className="img-container">
+                    <img src="https://images.unsplash.com/photo-1661105029962-898acb801f18?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80"></img>
+                  </div>
+                </div>
+              </a>
+            </div>
           </div>
         </div>
 
-        <div className="grid-effect-container">
+        <div className="grid-effect-container d-none">
           <div className="grid-effect-up"></div>
         </div>
+
+        <GlitchImage bgImg={bgLargeHero} background={true}></GlitchImage>
       </section>
 
       {/* Presentation */}
@@ -129,29 +207,18 @@ const Homepage = () => {
             <div className="col-8">
               <h2 className="main-title">__hey</h2>
               <p className="description">
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum has been the industry's standard dummy
-                text ever since the 1500s, when an unknown printer took a galley
-                of type and scrambled it to make a type specimen book. It has
-                survived not only five centuries, but also the leap into
-                electronic typesetting, remaining essentially unchanged. It was
-                popularised in the 1960s with the release of Letraset sheets
-                containing Lorem Ipsum passages, and more recently with desktop
-                publishing software like Aldus PageMaker including versions of
-                Lorem Ipsum Lorem Ipsum is simply dummy text of the printing and
-                typesetting industry. Lorem Ipsum has been the industry's
-                standard dummy text ever since the 1500s, when an unknown
-                printer took a galley of type and scrambled it to make a type
-                specimen book. It has survived not only five centuries, but also
-                the leap into electronic typesetting, remaining essentially
-                unchanged. It was popularised in the 1960s with the release of
-                Letraset sheets containing Lorem Ipsum passages, and more
-                recently with desktop publishing software like Aldus PageMaker
-                including versions of Lorem IpsumLorem Ipsum is simply dummy
-                text of the printing and typesetting industry. Lorem Ipsum has
-                been the industry's standard dummy text ever since the 1500s,
-                when an unknown printer took a galley of type and scrambled it
-                to make a type specimen book.
+                Hi, I'm Gaetano! My education starts with a Secondary School
+                Diploma in IT thanks to it I learn different kinds of languages
+                like C++, PhP, Mysql. I continue my studies with a bachelor's
+                degree in Technological arts that allowed me to improve my
+                skills in design, photography and videomaking.
+              </p>
+              <p className="description">
+                "Web accessibility" was the title of my thesis. I explain of one
+                of the most important things during web development:
+                accessibility. I have written this like a sort of a guide for
+                everyone who wanna try to develop a website but has no
+                experience in this field.
               </p>
             </div>
           </div>
@@ -208,6 +275,18 @@ const Homepage = () => {
               </div>
               <div className="col-8">
                 <input className="window-border-inset"></input>
+              </div>
+              <div className="col-4">
+                <label>Your name:</label>
+              </div>
+              <div className="col-8">
+                <input className="window-border-inset"></input>
+              </div>
+              <div className="col-4">
+                <label>Your message:</label>
+              </div>
+              <div className="col-8">
+                <textarea className="window-border-inset"></textarea>
               </div>
             </div>
           </div>
