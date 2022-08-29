@@ -177,21 +177,32 @@
 
   .main-title {
     text-align: left;
+    z-index: 2;
   }
   .description {
     text-align: left;
+    z-index: 2;
+    position: relative;
   }
   .place-description {
     color: #fff;
+    z-index: 2;
+    position: relative;
   }
   .year-description {
     color: #fff;
+    z-index: 2;
+    position: relative;
   }
   .job-main-title {
     text-align: left;
+    z-index: 2;
+    position: relative;
   }
   .job-description {
     text-align: left;
+    z-index: 2;
+    position: relative;
     ul {
       margin: 0;
       margin-bottom: 16px;

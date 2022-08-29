@@ -24,6 +24,9 @@
     transform: translate(10%, -50%);
     width: 100%;
     height: 150px;
+    @include media-breakpoint-down(md) {
+      transform: translate(0, -50%);
+    }
 
     img {
       position: absolute;
@@ -45,7 +48,10 @@
     }
   }
   .website-container {
-    height: 500px;
+    height: 70vh;
+    @include media-breakpoint-down(md) {
+      height: 80vh;
+    }
     iframe {
       object-fit: contain;
       height: 100%;

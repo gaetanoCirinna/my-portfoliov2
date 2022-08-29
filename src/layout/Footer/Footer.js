@@ -10,13 +10,13 @@ const Footer = () => {
 
       <div className="container skills">
         <div className="row">
-          <div className="col-4">
+          <div className="col-md-4 col-12">
             <div className="row">
               {/* General */}
-              <div className="col-6">
+              <div className="col-md-6 col-12">
                 <span>__GENERAL SKILLS AND DEV TOOLS</span>
               </div>
-              <div className="col-6">
+              <div className="col-md-6 col-12">
                 <ul>
                   <li>HTML</li>
                   <li>CSS</li>
@@ -29,20 +29,20 @@ const Footer = () => {
                 </ul>
               </div>
               {/* Build tools and task runner */}
-              <div className="col-6">
+              <div className="col-md-6 col-12">
                 <span>__BUILD TOOLS / TASK RUNNERS</span>
               </div>
-              <div className="col-6">
+              <div className="col-md-6 col-12">
                 <ul>
                   <li>Webpack</li>
                   <li>Gulp</li>
                 </ul>
               </div>
               {/* TEMPLATING LANGUAGES */}
-              <div className="col-6">
+              <div className="col-md-6 col-12">
                 <span>__TEMPLATING LANGUAGES</span>
               </div>
-              <div className="col-6">
+              <div className="col-md-6 col-12">
                 <ul>
                   <li>EJS</li>
                   <li>REACT</li>
@@ -50,10 +50,10 @@ const Footer = () => {
                 </ul>
               </div>
               {/* __CSS PREPROCESSOR */}
-              <div className="col-6">
+              <div className="col-md-6 col-12">
                 <span>__CSS PREPROCESSOR</span>
               </div>
-              <div className="col-6">
+              <div className="col-md-6 col-12">
                 <ul>
                   <li>SCSS</li>
                   <li>SASS</li>
@@ -61,10 +61,10 @@ const Footer = () => {
                 </ul>
               </div>
               {/* Other skills */}
-              <div className="col-6">
+              <div className="col-md-6">
                 <span>__OTHER SKILLS</span>
               </div>
-              <div className="col-6">
+              <div className="col-md-6 col-12">
                 <ul>
                   <li>Photoshop</li>
                   <li>Illustrator</li>
@@ -74,7 +74,7 @@ const Footer = () => {
               </div>
             </div>
           </div>
-          <div className="col-8">
+          <div className="col-md-8 col-12">
             <div className="last-item-on-footer d-flex flex-column align-items-center gap-2">
               <h4>Gaetano Cirinnà</h4>
               <img width={32} height={32} src={logo}></img>
@@ -83,11 +83,18 @@ const Footer = () => {
                 Potter.
               </p>
               <div className="d-flex w-100 gap-2 justify-content-center">
-                <a href="https://github.com/gaetanoCirinna">Github</a>
-                <a href="http://www.linkedin.com/in/gaetano-cirinna">
+                <a target="_blank" href="https://github.com/gaetanoCirinna">
+                  Github
+                </a>
+                <a
+                  target="_blank"
+                  href="http://www.linkedin.com/in/gaetano-cirinna"
+                >
                   Linkedin
                 </a>
-                <a href="https://www.behance.net/gaetanociro">Behance</a>
+                <a target="_blank" href="https://www.behance.net/gaetanociro">
+                  Behance
+                </a>
               </div>
             </div>
           </div>

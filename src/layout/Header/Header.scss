@@ -1,3 +1,4 @@
+@import "./../../App.scss";
 header {
   position: absolute;
   top: 0%;
@@ -18,10 +19,28 @@ header {
         display: inline-block;
         a {
           color: #fff;
-          font-size: 16px;
+          font-size: 18px;
           font-family: "Inconsolata", sans-serif;
           font-weight: 700;
           line-height: 1.125;
+        }
+      }
+    }
+  }
+  .nav-dark {
+    ul {
+      li {
+        a {
+          color: map-get($colors, russianViolet);
+        }
+      }
+    }
+  }
+  .nav-light {
+    ul {
+      li {
+        a {
+          color: #fff;
         }
       }
     }

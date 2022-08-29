@@ -16,25 +16,25 @@ const Project = () => {
 
   const dataRaw = {
     betterly: {
-      title: "Betterly",
-      tags: ["Angular", "Java", "Pizza"],
+      title: "<a href='https://www.betterly.com/uk'>betterly.com</a>",
+      tags: ["Angular", "SCSS", "ExpressJS", "NodeJS", "EJS"],
       secondTitle: "De Agostini",
-      description: [""],
+      description: ["Unfortunately, it will be offline in the next few days"],
       websiteTitle:
         "Look the real <a href='https://www.betterly.com/uk'>website</a>!",
       websiteURL: "https://www.betterly.com/uk",
     },
     deagostini: {
       title: "<a href='https://www.deagostini.com/uk/'>deagostini.com</a>",
-      tags: ["Gatsby", "React", "SSCSS"],
+      tags: ["Gatsby", "React", "SCSS", "MobX"],
       secondTitle: "De Agostini Publishing",
       description: [""],
       websiteTitle: "Look the real website!",
       websiteURL: "https://www.deagostini.com/uk/",
     },
     fanhome: {
-      title: "Fanhome",
-      tags: ["Angular", "Java", "Pizza"],
+      title: "<a href='https://www.fanhome.com/uk/'>fanhome.com</a>",
+      tags: ["Gatsby", "React", "SCSS", "MobX"],
       secondTitle: "De Agostini Publishing",
       description: [""],
       websiteTitle: "Look the real website!",
@@ -42,7 +42,7 @@ const Project = () => {
     },
     leroy: {
       title: "Leroy Merlin",
-      tags: ["Angular", "Java", "Pizza"],
+      tags: ["React", "HTML", "CSS"],
       secondTitle: "Mastercode, TAG, Milano - Final exam",
       description: [""],
       websiteTitle: "Look the real website!",
@@ -51,7 +51,7 @@ const Project = () => {
     },
     asteroids: {
       title: "Asteroids news",
-      tags: ["Angular", "Java", "Pizza"],
+      tags: ["Angular", "SASS"],
       secondTitle: "Visual Agency - Assinment",
       description: [""],
       websiteTitle:
@@ -126,7 +126,7 @@ const Project = () => {
     <Fragment>
       <section className="large-hero-project d-flex flex-column align-items-start h-100 justify-content-center">
         <div className="container">
-          <div className="main-content p-5">
+          <div className="main-content p-1 px-2 p-md-5">
             <div className="d-flex justify-content-between align-items-center">
               <h1 className="main-title">
                 <Text>{dataRaw[param]?.title}</Text>
