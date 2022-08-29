@@ -14,12 +14,18 @@ import GlitchImage from "../components/GlitchImage/GlitchImage";
 import Text from "../components/Text";
 import bgLargeHero from "./../assets/background portfolio.png";
 import GlitchText from "../components/GlitcgText";
+import deaLocandina from "./../assets/locandine/deagostini.png";
+import fhLocandina from "./../assets/locandine/fanhome.png";
+import betterlyLocandina from "./../assets/locandine/betterly.png";
 
 import { send } from "emailjs-com";
+import Loading from "../components/Loading/Loading";
 
 const Homepage = () => {
   const refImgV1 = useRef(null);
   const refImgV2 = useRef(null);
+  const [isLoading, setLoading] = useState(false);
+  const [thankyou, setThankyou] = useState(false);
 
   const [toSend, setToSend] = useState({
     from_name: "",
@@ -29,13 +35,18 @@ const Homepage = () => {
   });
 
   const onSubmit = (e) => {
+    setLoading(true);
+    setThankyou(false);
     e.preventDefault();
     send("service_lkzacwz", "template_jgmmcp9", toSend, "_Xux2pRTd-wZwpa9i")
       .then((response) => {
         console.log("SUCCESS!", response.status, response.text);
+        setLoading(false);
+        setThankyou(true);
       })
       .catch((err) => {
         console.log("FAILED...", err);
+        setLoading(false);
       });
   };
 
@@ -101,7 +112,7 @@ const Homepage = () => {
                   className="card-body px-0 pb-0 pt-1"
                 >
                   <div className="img-container">
-                    <img src="https://images.unsplash.com/photo-1661105029962-898acb801f18?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80"></img>
+                    <img src={deaLocandina}></img>
                   </div>
                 </a>
               </div>
@@ -130,7 +141,7 @@ const Homepage = () => {
                 </div>
                 <div className="card-body px-0 pb-0 pt-1">
                   <div className="img-container">
-                    <img src="https://images.unsplash.com/photo-1661105029962-898acb801f18?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80"></img>
+                    <img src={fhLocandina}></img>
                   </div>
                 </div>
               </a>
@@ -154,7 +165,7 @@ const Homepage = () => {
                 </div>
                 <div className="card-body px-0 pb-0 pt-1">
                   <div className="img-container">
-                    <img src="https://images.unsplash.com/photo-1661105029962-898acb801f18?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80"></img>
+                    <img src={betterlyLocandina}></img>
                   </div>
                 </div>
               </a>
@@ -224,7 +235,12 @@ const Homepage = () => {
           <div className="grid-effect-up"></div>
         </div>
 
-        <GlitchImage bgImg={bgLargeHero} background={true}></GlitchImage>
+        <GlitchImage
+          moveX={5}
+          moveY={5}
+          bgImg={bgLargeHero}
+          background={true}
+        ></GlitchImage>
       </section>
 
       {/* Presentation */}
@@ -282,7 +298,7 @@ const Homepage = () => {
             </div>
           </div>
         </div>
-        <GlitchImage bgImg={bgImg}></GlitchImage>
+        <GlitchImage moveX={5} moveY={5} bgImg={bgImg}></GlitchImage>
       </section>
 
       {/* Contact me */}
@@ -292,51 +308,65 @@ const Homepage = () => {
             <div className="col-12">
               <h2 className="main-title">__contact me</h2>
             </div>
+            {thankyou && (
+              <div className="col-12">
+                I've received the message, many thx! {"<3"}
+              </div>
+            )}
           </div>
         </div>
-        <form onSubmit={onSubmit}>
-          <div className="container container-custom">
-            <div className="row">
-              <div className="col-4">
-                <label>Your e-mail:</label>
-              </div>
-              <div className="col-8">
-                <input
-                  onChange={handleChange}
-                  name="from_email"
-                  value={toSend.from_email}
-                  className="window-border-inset"
-                ></input>
-              </div>
-              <div className="col-4">
-                <label>Your name:</label>
-              </div>
-              <div className="col-8">
-                <input
-                  onChange={handleChange}
-                  name="from_name"
-                  placeholder=""
-                  value={toSend.from_name}
-                  className="window-border-inset"
-                ></input>
-              </div>
-              <div className="col-4">
-                <label>Your message (help me to help yourself):</label>
-              </div>
-              <div className="col-8">
-                <textarea
-                  onChange={handleChange}
-                  name="from_message"
-                  value={toSend.from_message}
-                  className="window-border-inset"
-                ></textarea>
-              </div>
-              <div className="col-12">
-                <button type="submit">Submit</button>
+        {isLoading ? (
+          <div>
+            <Loading></Loading>
+          </div>
+        ) : (
+          <form onSubmit={onSubmit}>
+            <div className="container container-custom">
+              <div className="row">
+                <div className="col-4">
+                  <label>Your e-mail*:</label>
+                </div>
+                <div className="col-8">
+                  <input
+                    required
+                    type={"email"}
+                    onChange={handleChange}
+                    name="from_email"
+                    value={toSend.from_email}
+                    className="window-border-inset"
+                  ></input>
+                </div>
+                <div className="col-4">
+                  <label>Your name:</label>
+                </div>
+                <div className="col-8">
+                  <input
+                    onChange={handleChange}
+                    name="from_name"
+                    placeholder=""
+                    value={toSend.from_name}
+                    className="window-border-inset"
+                  ></input>
+                </div>
+                <div className="col-4">
+                  <label>Your message (help me to help yourself)*:</label>
+                </div>
+                <div className="col-8">
+                  <textarea
+                    required
+                    onChange={handleChange}
+                    name="from_message"
+                    value={toSend.from_message}
+                    className="window-border-inset"
+                  ></textarea>
+                </div>
+                <div className="col-12">
+                  <button type="submit">Submit</button>
+                </div>
               </div>
             </div>
-          </div>
-        </form>
+          </form>
+        )}
       </section>
     </Fragment>
   );

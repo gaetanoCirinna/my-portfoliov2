@@ -19,9 +19,7 @@ const Project = () => {
       title: "Betterly",
       tags: ["Angular", "Java", "Pizza"],
       secondTitle: "De Agostini",
-      description: [
-        "Veniam nulla pariatur veniam cupidatat. Cupidatat aliqua consectetur fugiat ullamco duis ipsum nostrud qui voluptate dolor consequat. Ullamco in anim veniam adipisicing ullamco adipisicing. Id sint irure excepteur ad velit pariatur est irure voluptate.",
-      ],
+      description: [""],
       websiteTitle:
         "Look the real <a href='https://www.betterly.com/uk'>website</a>!",
       websiteURL: "https://www.betterly.com/uk",
@@ -38,9 +36,7 @@ const Project = () => {
       title: "Fanhome",
       tags: ["Angular", "Java", "Pizza"],
       secondTitle: "De Agostini Publishing",
-      description: [
-        "Veniam nulla pariatur veniam cupidatat. Cupidatat aliqua consectetur fugiat ullamco duis ipsum nostrud qui voluptate dolor consequat. Ullamco in anim veniam adipisicing ullamco adipisicing. Id sint irure excepteur ad velit pariatur est irure voluptate.",
-      ],
+      description: [""],
       websiteTitle: "Look the real website!",
       websiteURL: "https://www.fanhome.com/uk/",
     },
@@ -48,9 +44,7 @@ const Project = () => {
       title: "Leroy Merlin",
       tags: ["Angular", "Java", "Pizza"],
       secondTitle: "Mastercode, TAG, Milano - Final exam",
-      description: [
-        "Veniam nulla pariatur veniam cupidatat. Cupidatat aliqua consectetur fugiat ullamco duis ipsum nostrud qui voluptate dolor consequat. Ullamco in anim veniam adipisicing ullamco adipisicing. Id sint irure excepteur ad velit pariatur est irure voluptate.",
-      ],
+      description: [""],
       websiteTitle: "Look the real website!",
       websiteURL: "https://leroy-merlin-tag-final.netlify.app/",
       mobile: true,
@@ -59,9 +53,7 @@ const Project = () => {
       title: "Asteroids news",
       tags: ["Angular", "Java", "Pizza"],
       secondTitle: "Visual Agency - Assinment",
-      description: [
-        "Veniam nulla pariatur veniam cupidatat. Cupidatat aliqua consectetur fugiat ullamco duis ipsum nostrud qui voluptate dolor consequat. Ullamco in anim veniam adipisicing ullamco adipisicing. Id sint irure excepteur ad velit pariatur est irure voluptate.",
-      ],
+      description: [""],
       websiteTitle:
         "Look the real <a href='https://asteroidsneows-visualagency.netlify.app/'>website</a>!",
       websiteURL: "https://asteroidsneows-visualagency.netlify.app/",
@@ -70,13 +62,13 @@ const Project = () => {
 
     default: {
       title: "Nothing found .-.",
-      tags: ["Angular", "Java", "Pizza"],
-      secondTitle: "De Agostini",
+      tags: ["Pizza", "Lasagne vegan", "Trilly"],
+      secondTitle: "Just a lorem ipsum page",
       description: [
         "Veniam nulla pariatur veniam cupidatat. Cupidatat aliqua consectetur fugiat ullamco duis ipsum nostrud qui voluptate dolor consequat. Ullamco in anim veniam adipisicing ullamco adipisicing. Id sint irure excepteur ad velit pariatur est irure voluptate.",
       ],
       websiteTitle: "Look the website below!",
-      websiteURL: "https://www.betterly.com/uk",
+      websiteURL: "",
     },
   };
 
